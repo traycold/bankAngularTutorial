@@ -1,0 +1,24 @@
+<div class="container-fluid">
+	<h1>List of transactions for account number {{accountNumber}}</h1>
+
+	<table ng-table="tableParams" class="table">
+    <tr>
+        <th>Date</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Amount</th>
+    </tr>
+    <tr ng-repeat="transaction in $data">
+        <td title="Date">
+            {{transaction.date | date}}</td>
+        <td title="From">
+            {{transaction.from}}</td>
+        <td title="To">
+            {{transaction.to}}</td>
+        <td title="Amount">
+            {{transaction.amount | currency}}</td>
+    </tr>
+</table>
+	<a href="#/" class="btn btn-primary">Go back home</a>
+	<!--a href="#/boh">Simulate 404</a-->
+</div>
